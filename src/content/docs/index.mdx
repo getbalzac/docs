@@ -1,40 +1,68 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Balzac
+description: Fast, safe static site generator in Rust
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Fast, safe static site generator in Rust
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/balzac-logo.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /guides/getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Installation
+      link: /guides/installation/
+      icon: download
       variant: minimal
 ---
-
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Blazing Fast Websites
+
+Built with Rust for performance, memory safety, and reliability.
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Memory Safe" icon="alert">
+    Guaranteed memory safety with Rust. No null pointer exceptions, no data races, no crashes.
+  </Card>
+  <Card title="Handlebars Templating" icon="code">
+    Familiar, logic-less templates with partials and helpers. Clean separation of content and presentation.
+  </Card>
+  <Card title="Content Collections" icon="list">
+    Organize your Markdown content with frontmatter and powerful template features.
+  </Card>
+  <Card title="Build Hooks" icon="gear">
+    Customize your build process with shell commands at any stage. Run tests, build assets, or deploy automatically.
+  </Card>
+  <Card title="Vite Integration" icon="lightning">
+    Modern asset bundling with Vite. Optimized production builds with automatic asset hashing.
+  </Card>
+  <Card title="Simple Configuration" icon="file">
+    Minimal setup with sensible defaults. Get started in minutes with just a few files.
+  </Card>
 </CardGrid>
+
+## Simple & Powerful
+
+Write content in Markdown, style with Handlebars templates, and deploy anywhere.
+
+```toml
+# balzac.toml
+[global]
+site_name = "My Site"
+```
+
+```handlebars
+<!-- pages/index.hbs -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>{{site_name}}</h1>
+    <p>Hello, World!</p>
+  </body>
+</html>
+```
+
+```bash
+balzac build
+```
